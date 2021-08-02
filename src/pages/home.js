@@ -1,5 +1,5 @@
 import * as React from "react";
-import { home, link ,work} from "./layout.module.css";
+import { home, link, work, about,aboutLink } from "./layout.module.css";
 import { Link } from "gatsby";
 const Home = () => {
   return (
@@ -21,11 +21,30 @@ const Home = () => {
         />
       </div>
       <div className={work}>
-       <img src="https://pcer.ac.in/wp-content/uploads/2020/01/community-service-navjeevan-centre-murbad-2-565x423.jpg" alt="poza2"/>
-       <div>
-       <p>some text about how we help local communities to promote their tourism...see how you can help them too</p>
-       <Link  className={link} to='work'>Check our Work</Link>
-       </div>
+        <img
+          src="https://pcer.ac.in/wp-content/uploads/2020/01/community-service-navjeevan-centre-murbad-2-565x423.jpg"
+          alt="poza2"
+        />
+        <div>
+          <p>
+            some text about how we help local communities to promote their
+            tourism...see how you can help them too
+          </p>
+          <Link className={link} to="/work">
+            Check our Work
+          </Link>
+        </div>
+      </div>
+      <div className={about}>
+        <h1>Interested in joining our team?</h1>
+        <div>
+        <p>
+          Meet our members and see if our community is what you are looking for.
+          Schedule an interview with our HR, find all the contact details
+          riiight here.
+        </p>
+        <Link className={link} to="/about">Meet the Members</Link>
+      </div>
       </div>
     </main>
   );

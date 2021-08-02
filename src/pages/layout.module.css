@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+Pro:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Georama:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+*{
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+}
 .container {
   display: flex;
   list-style: none;
@@ -11,10 +17,9 @@ body {
   margin: 0;
   padding: 0;
   margin-top: -17px;
-  background-color: #b2cef7;
+  background-color: #f39189;
 }
 .layout {
-  background-color: #b2cef7;
   margin: auto;
 }
 .nav-list-item {
@@ -23,12 +28,13 @@ body {
 .nav-link-text {
   text-decoration: none;
   font-weight: bold;
-  font-family: "Bree Serif", serif;
-  color: black;
+  font-size: 1.5em;
+  font-family: "Bebas Neue", cursive;
+  color: #046582;
 }
 
 .nav-link-text:visited {
-  color: black;
+  color: #046582;
   border-bottom: brown 3px solid;
 }
 
@@ -41,16 +47,12 @@ body {
   border-bottom: 3px solid brown;
 }
 
-/* .nav-list-item:hover {
-  background-color: #6c9de3;
-} */
-
 .heading {
   margin-right: auto;
   padding: 20px;
-  color: brown;
+  color: #046582;
   font-family: "Bebas Neue", cursive;
-  font-size: large;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -59,10 +61,9 @@ body {
   justify-content: space-around;
   background-color: #e8f0f2;
   padding: 20px;
-  font-family: "Georama", sans-serif;
   font-weight: bold;
   font-size: large;
-  color: #595260;
+  color: #2C2E43;
 }
 
 .home > img {
@@ -76,27 +77,27 @@ body {
   height: 300px;
 }
 .link:visited {
-  color: #595260;
+  color: #bb8082;
 }
 .link {
   border: 3px solid #595260;
   border-radius: 5px;
-  font-family: "Georama", sans-serif;
   font-size: large;
   font-weight: bold;
   background-color: #e8f0f2;
   padding: 10px;
-  color: #595260;
+  color: #bb8082;
   text-decoration: none;
 }
 
 .link:hover {
-  background-color: #595260;
-  color:#e8f0f2;
+  background-color: #bb8082;
+  color: #e8f0f2;
 }
 .work {
   padding: 20px;
   display: flex;
+  color:#2C2E43;
   justify-content: space-around;
 }
 .work > img {
@@ -110,19 +111,58 @@ body {
 }
 
 .work > div > .link {
-  border:3px solid #053742;
-  background-color: #b2cef7;
-  color: #053742;
+  border: 3px solid #053742;
+  background-color: #f39189;
+  color: white;
 }
 
 .work > div > .link:hover {
   background-color: #053742;
-  color:#b2cef7;
-  
+  color: #f39189;
 }
 p {
-  font-family: "Georama", sans-serif;
   font-weight: bold;
   font-size: large;
-  color: #595260;
+
 }
+
+.about {
+  background-color: #046582;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #dddddd;
+  padding:20px;
+}
+
+.align > h1 {
+  margin: auto;
+}
+.about > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about > div > p {
+  flex:3 
+}
+
+.about>div>.link{
+border:3px solid #dddddd;
+background-color: #046582;
+color:#dddddd;
+text-align:center;
+margin:auto;
+flex:1;
+}
+
+.about>div>.link:hover{
+background-color: #dddddd;
+color:#046582;
+}
+footer{
+  padding:20px;
+  color:#2C2E43;
+}
+footer>h2{
+  text-align:center;
+}
+
