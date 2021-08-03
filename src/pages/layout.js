@@ -23,12 +23,12 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navListItem}>
-            <Link className={navLinkText} to="/destinations">
+            <Link className={navLinkText} to="/articles/destinations">
               Destinations
             </Link>
           </li>
           <li className={navListItem}>
-            <Link className={navLinkText} to="/work">
+            <Link className={navLinkText} to="/articles/work">
               Work
             </Link>
           </li>
@@ -40,7 +40,7 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       {children}
-      <footer><h2>You reached the end of the page</h2></footer>
+      <footer><h5>You reached the end of the page</h5></footer>
     </div>
   );
 };

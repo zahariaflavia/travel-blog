@@ -5,6 +5,7 @@
 
 *{
   font-family: Georgia, "Times New Roman", Times, serif;
+  color:#2C2E43;
 
 }
 .container {
@@ -159,10 +160,42 @@ background-color: #dddddd;
 color:#046582;
 }
 footer{
-  padding:20px;
+  padding:5px;
   color:#2C2E43;
+  display: flex;
+  justify-content: space-around;
 }
-footer>h2{
+footer>h5{
   text-align:center;
+}
+
+.posts{
+  background-color: #e8f0f2;
+  border-radius:5px;
+  display:flex;
+  flex-direction: column;
+
+}
+.posts>h1{
+  color:#046582;
+}
+
+.posts>ul>li{
+  list-style: none;
+  color:#046582;
+  text-decoration: none;
+  padding:10px;
+}
+
+.list-item{
+  color: #046582;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  text-decoration:none;
+  font-weight:bold;
+}
+.list-item:hover{
+  color:brown;
+  border-bottom:2px solid brown
 }
 
