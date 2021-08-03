@@ -2,6 +2,7 @@ import * as React from "react";
 import { home, link, work, about } from "./layout.module.css";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import Contact from "./contact";
 const Home = () => {
   return (
     <main>
@@ -37,16 +38,11 @@ const Home = () => {
         </div>
       </div>
       <div className={about}>
-        <h1>Interested in joining our team?</h1>
-        <div>
-        <p>
-          Meet our members and see if our community is what you are looking for.
+        <Contact header="Interested in joining our team?" linkText="Meet the Members"> Meet our members and see if our community is what you are looking for.
           Schedule an interview with our HR, find all the contact details
-          riiight here.
-        </p>
-        <Link className={link} to="/about">Meet the Members</Link>
+          riiight here.</Contact>
       </div>
-      </div>
+      {/* </div> */}
     </main>
   );
 };

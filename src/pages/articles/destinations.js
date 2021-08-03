@@ -2,32 +2,16 @@ import * as React from "react";
 import Layout from "../layout";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { posts, listItem } from "../layout.module.css";
+import { posts, listItem,link } from "../layout.module.css";
 import { Link } from "gatsby";
+import Contact from '../contact'
+import Article from "./article";
 const Destinations = ({ data }) => {
   return (
     <Layout pageTitle="Destinations">
-      <main className={posts}>
-        <h1>Check out our latest trips</h1>
-        <ul>
-          {data.allMdx.nodes
-            .filter(
-              (destination) =>
-                destination.frontmatter.category === "Destination"
-            )
-            .map((destination) => {
-              return (
-                <li key={destination.id}>
-                  <Link
-                    className={listItem}
-                    to={`/articles/${destination.slug}`}
-                  >
-                    {destination.frontmatter.title}
-                  </Link>
-                </li>
-              );
-            })}
-        </ul>
+      <main >
+        <Article header="Check out our latest trips" data={data} category="Destination"></Article>
+       <Contact header="Interested in sharing your personal experience?" linkText="Find out More">ilfjrijthngnjemefskdawlmefjlnkrgh</Contact>
       </main>
     </Layout>
   );

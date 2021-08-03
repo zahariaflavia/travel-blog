@@ -3,10 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
-*{
+* {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color:#2C2E43;
-
+  color: #2c2e43;
 }
 .container {
   display: flex;
@@ -64,7 +63,7 @@ body {
   padding: 20px;
   font-weight: bold;
   font-size: large;
-  color: #2C2E43;
+  color: #2c2e43;
 }
 
 .home > img {
@@ -98,7 +97,7 @@ body {
 .work {
   padding: 20px;
   display: flex;
-  color:#2C2E43;
+  color: #2c2e43;
   justify-content: space-around;
 }
 .work > img {
@@ -124,14 +123,13 @@ body {
 p {
   font-weight: bold;
   font-size: large;
-
 }
 
 .about {
   background-color: #046582;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #dddddd;
-  padding:20px;
+  padding: 20px;
 }
 
 .align > h1 {
@@ -143,59 +141,105 @@ p {
 }
 
 .about > div > p {
-  flex:3 
+  flex: 3;
 }
 
-.about>div>.link{
-border:3px solid #dddddd;
-background-color: #046582;
-color:#dddddd;
-text-align:center;
-margin:auto;
-flex:1;
+.about > div > .link {
+  border: 3px solid #dddddd;
+  background-color: #046582;
+  color: #dddddd;
+  text-align: center;
+  margin: auto;
+  flex: 1;
 }
 
-.about>div>.link:hover{
-background-color: #dddddd;
-color:#046582;
+.about > div > .link:hover {
+  background-color: #dddddd;
+  color: #046582;
 }
-footer{
-  padding:5px;
-  color:#2C2E43;
+footer {
+  padding: 5px;
+  color: #2c2e43;
   display: flex;
   justify-content: space-around;
 }
-footer>h5{
-  text-align:center;
+footer > h5 {
+  text-align: center;
 }
 
-.posts{
+.posts {
   background-color: #e8f0f2;
-  border-radius:5px;
-  display:flex;
+  border-radius: 5px;
+  display: flex;
   flex-direction: column;
-
 }
-.posts>h1{
-  color:#046582;
-}
-
-.posts>ul>li{
-  list-style: none;
-  color:#046582;
-  text-decoration: none;
-  padding:10px;
-}
-
-.list-item{
+.posts > h1 {
   color: #046582;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: large;
-  text-decoration:none;
-  font-weight:bold;
-}
-.list-item:hover{
-  color:brown;
-  border-bottom:2px solid brown
 }
 
+.posts > ul > li {
+  list-style: none;
+  color: #046582;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.list-item {
+  color: #046582;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  text-decoration: none;
+  font-weight: bold;
+}
+.list-item:hover {
+  color: brown;
+  border-bottom: 2px solid brown;
+}
+
+.contact{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #046582;
+}
+
+.contact>.title{
+  flex: 0 0 100%;
+  text-align: center;
+  color: #f39189;
+}
+
+.contact>div{
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: justify;
+
+}
+.contact>div>*{
+  color:#f39189
+}
+.contact>.section1{
+  flex: 1 0 30%;
+  
+}
+
+.contact>.section2{
+  flex: 0 0 25%;
+  margin-left: 0;
+}
+.contact>.section2>*{
+border:3px solid #f39189;
+text-decoration:none;
+padding:10px;
+text-align:center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight:bold;
+}
+
+.contact>.section2>*:hover{
+  color:#046582;
+  background-color: #f39189;
+}

@@ -5,30 +5,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { posts,listItem } from "../layout.module.css";
+import Article from './article'
+import Contact from '../contact'
 const Work = ({ data }) => {
   return (
     <Layout pageTitle="Work">
-      <main className={posts}>
-        <h1>Check out our latest trips</h1>
-        <ul>
-          {data.allMdx.nodes
-            .filter(
-              (work) =>
-                work.frontmatter.category === "Work"
-            )
-            .map((work) => {
-              return (
-                <li key={work.id}>
-                  <Link
-                    className={listItem}
-                    to={`/articles/${work.slug}`}
-                  >
-                    {work.frontmatter.title}
-                  </Link>
-                </li>
-              );
-            })}
-        </ul>
+      <main >
+      <Article header="Check out our latest projects" data={data} category="Work"></Article>
+      <Contact header="Do you want to join forces and help our communities?" linkText="Find out More">ilfjrijthngnjemefskdawlmefjlnkrgh</Contact>
       </main>
     </Layout>
   );
