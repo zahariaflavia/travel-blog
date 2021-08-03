@@ -1,6 +1,7 @@
 import * as React from "react";
-import { home, link, work, about,aboutLink } from "./layout.module.css";
+import { home, link, work, about } from "./layout.module.css";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 const Home = () => {
   return (
     <main>
