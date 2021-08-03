@@ -1,7 +1,6 @@
 import * as React from "react";
 import { home, link, work, about } from "./layout.module.css";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import Contact from "./contact";
 const Home = () => {
   return (
@@ -13,7 +12,7 @@ const Home = () => {
             <br />
             Let us wander together around the world
           </p>
-          <Link className={link} to="/destinations">
+          <Link className={link} to="/articles/destinations">
             See our Destinations
           </Link>
         </div>
@@ -32,7 +31,7 @@ const Home = () => {
             some text about how we help local communities to promote their
             tourism...see how you can help them too
           </p>
-          <Link className={link} to="/work">
+          <Link className={link} to="/articles/work">
             Check our Work
           </Link>
         </div>
@@ -46,4 +45,5 @@ const Home = () => {
     </main>
   );
 };
+
 export default Home;

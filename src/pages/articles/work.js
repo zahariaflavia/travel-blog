@@ -1,10 +1,6 @@
 import * as React from "react";
 import Layout from "../layout";
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
-import { posts,listItem } from "../layout.module.css";
 import Article from './article'
 import Contact from '../contact'
 const Work = ({ data }) => {
@@ -25,6 +21,7 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           category
+          author
         }
         id
         slug

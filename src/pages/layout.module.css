@@ -128,35 +128,13 @@ p {
 .about {
   background-color: #046582;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #dddddd;
   padding: 20px;
 }
 
-.align > h1 {
-  margin: auto;
-}
-.about > div {
-  display: flex;
-  justify-content: space-around;
+.about h1{
+  color:#f39189;
 }
 
-.about > div > p {
-  flex: 3;
-}
-
-.about > div > .link {
-  border: 3px solid #dddddd;
-  background-color: #046582;
-  color: #dddddd;
-  text-align: center;
-  margin: auto;
-  flex: 1;
-}
-
-.about > div > .link:hover {
-  background-color: #dddddd;
-  color: #046582;
-}
 footer {
   padding: 5px;
   color: #2c2e43;
@@ -223,7 +201,6 @@ footer > h5 {
 }
 .contact>.section1{
   flex: 1 0 30%;
-  
 }
 
 .contact>.section2{
@@ -242,4 +219,19 @@ font-weight:bold;
 .contact>.section2>*:hover{
   color:#046582;
   background-color: #f39189;
+}
+
+.article{
+  background-color: #e8f0f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:70%;
+  height:70%;
+  margin:auto;
+}
+
+.article div{
+  padding:30px;
 }

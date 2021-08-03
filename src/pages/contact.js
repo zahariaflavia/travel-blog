@@ -1,5 +1,5 @@
 import * as React from "react";
-import { contact, section1,section2,title,contactItems} from "./layout.module.css";
+import { contact, section1,section2,title} from "./layout.module.css";
 import { Link } from "gatsby";
 const Contact = ({ header, linkText, children }) => {
   return (<div className={contact}>

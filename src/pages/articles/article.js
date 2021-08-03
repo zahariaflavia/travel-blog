@@ -1,9 +1,9 @@
 import * as React from 'react'
 import {Link} from 'gatsby'
 import {listItem,posts} from '../layout.module.css'
+
 const Article=({header,data,category})=>{
-return(<div
-    className={posts}><h1>{header}</h1>
+return(<div className={posts}><h1>{header}</h1>
     <ul>
       {data.allMdx.nodes
         .filter(
