@@ -40,7 +40,6 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       {children}
-      <footer><h5>You reached the end of the page</h5></footer>
     </div>
   );
 };

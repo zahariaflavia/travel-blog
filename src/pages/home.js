@@ -28,8 +28,9 @@ const Home = () => {
         />
         <div>
           <p>
-            some text about how we help local communities to promote their
-            tourism...see how you can help them too
+            We help our local communities promote their family business...see
+            how you can help them too. Learn more about all the process that
+            lays behind a successful, eco-friendly accomodation.
           </p>
           <Link className={link} to="/articles/work">
             Check our Work
@@ -37,11 +38,16 @@ const Home = () => {
         </div>
       </div>
       <div className={about}>
-        <Contact header="Interested in joining our team?" linkText="Meet the Members"> Meet our members and see if our community is what you are looking for.
+        <Contact
+          header="Interested in joining our team?"
+          linkText="Meet the Members"
+        >
+          {" "}
+          Meet our members and see if our community is what you are looking for.
           Schedule an interview with our HR, find all the contact details
-          riiight here.</Contact>
+          riiight here.
+        </Contact>
       </div>
-      {/* </div> */}
     </main>
   );
 };

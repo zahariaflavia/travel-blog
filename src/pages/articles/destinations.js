@@ -1,14 +1,23 @@
 import * as React from "react";
 import Layout from "../layout";
 import { graphql } from "gatsby";
-import Contact from '../contact'
+import Contact from "../contact";
 import Article from "./article";
 const Destinations = ({ data }) => {
   return (
     <Layout pageTitle="Destinations">
-      <main >
-        <Article header="Check out our latest trips" data={data} category="Destination"></Article>
-       <Contact header="Interested in sharing your personal experience?" linkText="Find out More">ilfjrijthngnjemefskdawlmefjlnkrgh</Contact>
+      <main>
+        <Article
+          header="Check out our latest trips"
+          data={data}
+          category="Destination"
+        ></Article>
+        <Contact
+          header="Interested in sharing your personal experience?"
+          linkText="Find out More"
+        >
+          These are the latest trips that you definitely want to book
+        </Contact>
       </main>
     </Layout>
   );

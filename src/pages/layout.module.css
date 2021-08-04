@@ -131,18 +131,8 @@ p {
   padding: 20px;
 }
 
-.about h1{
-  color:#f39189;
-}
-
-footer {
-  padding: 5px;
-  color: #2c2e43;
-  display: flex;
-  justify-content: space-around;
-}
-footer > h5 {
-  text-align: center;
+.about h1 {
+  color: #f39189;
 }
 
 .posts {
@@ -153,6 +143,7 @@ footer > h5 {
 }
 .posts > h1 {
   color: #046582;
+  padding-left: 40px;
 }
 
 .posts > ul > li {
@@ -174,64 +165,90 @@ footer > h5 {
   border-bottom: 2px solid brown;
 }
 
-.contact{
+.contact {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   background-color: #046582;
 }
 
-.contact>.title{
+.contact > .title {
   flex: 0 0 100%;
   text-align: center;
   color: #f39189;
 }
 
-.contact>div{
+.contact > div {
   margin: 10px;
   padding: 20px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   text-align: justify;
+}
+.contact > div > * {
+  color: #f39189;
+}
+.contact > .section1 {
+  flex: 1 0 20%;
+}
 
-}
-.contact>div>*{
-  color:#f39189
-}
-.contact>.section1{
-  flex: 1 0 30%;
-}
-
-.contact>.section2{
+.contact > .section2 {
   flex: 0 0 25%;
   margin-left: 0;
 }
-.contact>.section2>*{
-border:3px solid #f39189;
-text-decoration:none;
-padding:10px;
-text-align:center;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-weight:bold;
+.contact > .section2 > * {
+  border: 3px solid #f39189;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
 }
 
-.contact>.section2>*:hover{
-  color:#046582;
+.contact > .section2 > *:hover {
+  color: #046582;
   background-color: #f39189;
 }
 
-.article{
+.article {
   background-color: #e8f0f2;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width:70%;
-  height:70%;
-  margin:auto;
+  width: 70%;
+  height: 70%;
+  margin: auto;
 }
 
-.article div{
-  padding:30px;
+.article div {
+  padding: 30px;
+}
+
+.gallery {
+  display: flex;
+}
+.picture {
+  flex: 33.33%;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+}
+.picture h5 {
+  color: #f39189;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.icons {
+  border-left: brown 2px solid;
+}
+.infoSection {
+  text-align: center;
 }
