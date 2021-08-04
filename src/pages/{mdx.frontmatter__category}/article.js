@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { listItem, posts } from "../layout.module.css";
 
 const Article = ({ header, data, category }) => {
-  console.log(category);
   return (
     <div className={posts}>
       <h1>{header}</h1>
@@ -12,7 +11,7 @@ const Article = ({ header, data, category }) => {
           data.allMdx.nodes.map((destination) => {
             return (
               <li key={destination.id}>
-                <Link className={listItem} to={`/articles/${destination.slug}`}>
+                <Link className={listItem} to={`/${destination.frontmatter.category}/${destination.slug}`}>
                   {destination.frontmatter.title}
                 </Link>
               </li>

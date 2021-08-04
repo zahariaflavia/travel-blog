@@ -12,7 +12,7 @@ const Home = () => {
             <br />
             Let us wander together around the world
           </p>
-          <Link className={link} to="articles/destinations">
+          <Link className={link} to="/destinations">
             See our Destinations
           </Link>
         </div>
@@ -32,7 +32,7 @@ const Home = () => {
             how you can help them too. Learn more about all the process that
             lays behind a successful, eco-friendly accomodation.
           </p>
-          <Link className={link} to="articles/work">
+          <Link className={link} to="/work">
             Check our Work
           </Link>
         </div>

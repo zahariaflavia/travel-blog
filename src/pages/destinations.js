@@ -1,8 +1,8 @@
 import * as React from "react";
-import Layout from "../layout";
+import Layout from "./layout";
 import { graphql } from "gatsby";
-import Contact from '../contact'
-import Article from "./article";
+import Contact from './contact'
+import Article from "./{mdx.frontmatter__category}/article";
 const Destinations = ({ data }) => {
   return (
     <Layout pageTitle="Destinations">
@@ -15,7 +15,7 @@ const Destinations = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allMdx(sort: { fields: frontmatter___date, order: DESC },filter: { frontmatter: { category: { eq: "Destination" } } }) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC },filter: { frontmatter: { category: { eq: "destinations" } } }) {
       nodes {
         frontmatter {
           date(formatString: "MMMM D, YYYY")
