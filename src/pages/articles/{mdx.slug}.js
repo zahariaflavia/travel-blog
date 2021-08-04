@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { article } from "../layout.module.css";
 
-const Articles = ({ data, linkBack }) => {
+const Articles = ({ data}) => {
   return (
     <Layout pageTitle="Articles">
       <div className={article}>
