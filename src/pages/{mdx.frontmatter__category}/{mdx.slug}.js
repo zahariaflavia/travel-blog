@@ -4,9 +4,9 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { article } from "../layout.module.css";
 
-const Articles = ({ data}) => {
+const Articles = ({ data }) => {
   return (
-    <Layout pageTitle="Articles">
+    <Layout>
       <div className={article}>
         <div>
           <h1>{data.mdx.frontmatter.title}</h1>

@@ -8,10 +8,9 @@ import {
   layout,
 } from "./layout.module.css";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
   return (
     <div>
-      <title>{pageTitle}</title>
       <nav className={layout}>
         <ul className={container}>
           <li className={heading}>

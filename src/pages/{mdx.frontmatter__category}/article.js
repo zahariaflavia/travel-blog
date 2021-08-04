@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { listItem, posts } from "../layout.module.css";
 
-const Article = ({ header, data, category }) => {
+const Article = ({ header, data }) => {
   return (
     <div className={posts}>
       <h1>{header}</h1>
@@ -11,7 +11,10 @@ const Article = ({ header, data, category }) => {
           data.allMdx.nodes.map((destination) => {
             return (
               <li key={destination.id}>
-                <Link className={listItem} to={`/${destination.frontmatter.category}/${destination.slug}`}>
+                <Link
+                  className={listItem}
+                  to={`/${destination.frontmatter.category}/${destination.slug}`}
+                >
                   {destination.frontmatter.title}
                 </Link>
               </li>

@@ -28,9 +28,9 @@ const Home = () => {
         />
         <div>
           <p>
-            We help local communities promote their family business...see
-            how you can help them too. Learn more about all the process that
-            lays behind a successful, eco-friendly accomodation.
+            We help local communities promote their family business...see how
+            you can help them too. Learn more about all the process that lays
+            behind a successful, eco-friendly accomodation.
           </p>
           <Link className={link} to="/work">
             Check our Work
