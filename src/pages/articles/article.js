@@ -7,7 +7,7 @@ const Article = ({ header, data, category }) => {
     <div className={posts}>
       <h1>{header}</h1>
       <ul>
-        {data.allMdx.nodes
+        {data&&data.allMdx.nodes
           .filter(
             (destination) => destination.frontmatter.category === category
           )
