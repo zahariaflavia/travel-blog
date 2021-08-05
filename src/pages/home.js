@@ -2,6 +2,7 @@ import * as React from "react";
 import { home, link, work, homeItem, imageHome } from "./layout.module.css";
 import { Link } from "gatsby";
 import Contact from "./contact";
+import { StaticImage } from "gatsby-plugin-image";
 const Home = () => {
   return (
     <main>
@@ -17,7 +18,7 @@ const Home = () => {
           </Link>
         </div>
         <div className={homeItem}>
-          <img
+          <StaticImage
             className={imageHome}
             src="https://miro.medium.com/max/2980/1*8DYexSqTmp0dAVuZjvSHIQ.jpeg"
             alt="poza"
@@ -26,7 +27,7 @@ const Home = () => {
       </div>
       <div className={work}>
         <div className={homeItem}>
-          <img
+          <StaticImage
             className={imageHome}
             src="https://pcer.ac.in/wp-content/uploads/2020/01/community-service-navjeevan-centre-murbad-2-565x423.jpg"
             alt="poza2"
