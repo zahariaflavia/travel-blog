@@ -16,8 +16,8 @@ const Work = ({ data }) => {
           header="Do you want to join forces and help our communities?"
           linkText="Find out More"
         >
-          We publishes some of our advice for promoting local tourism in
-          different parts of the globe
+          We publish some of our advice for promoting local tourism in different
+          parts of the globe
         </Contact>
       </main>
     </Layout>

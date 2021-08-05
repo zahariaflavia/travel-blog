@@ -6,7 +6,7 @@ import { info, icons, infoSection } from "./layout.module.css";
 const ContactInfo = ({ email, phone, fb }) => {
   return (
     <div>
-      <h1 className={infoSection}>You know where to find us</h1>
+      <h3 className={infoSection}>You know where to find us</h3>
       <div className={info}>
         <div className={icons}>
           <EmailIcon />
