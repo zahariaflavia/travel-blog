@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Travel agency",
+    title: "Travel Blog",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -9,6 +9,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -24,6 +25,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "destination",
+        path: `${__dirname}/destinations/`,
+      },
+      __key: "destinations",
     },
   ],
 };
