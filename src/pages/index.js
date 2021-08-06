@@ -7,6 +7,7 @@ const IndexPage = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta description="Travel blog"/>
         <title>The Wanderer</title>
       </Helmet>
       <Layout>

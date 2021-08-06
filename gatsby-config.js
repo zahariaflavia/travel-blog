@@ -34,5 +34,11 @@ module.exports = {
       },
       __key: "destinations",
     },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
   ],
 };
