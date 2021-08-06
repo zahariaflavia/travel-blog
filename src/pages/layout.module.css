@@ -229,6 +229,12 @@ p {
   text-align: center;
 }
 
+footer{
+  text-align: center;
+  padding:20px;
+  font-weight:bold
+}
+
 @media (min-width: 600px) {
   .home {
     display: flex;
@@ -263,3 +269,4 @@ p {
     justify-content: space-between;
   }
 }
+

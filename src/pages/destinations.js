@@ -10,18 +10,20 @@ const Destinations = ({ data }) => {
       <Helmet>
         <title>Destinations</title>
       </Helmet>
-      <Layout >
-        <main >
-          <Article  header="Check out our latest trips" data={data}></Article>
-          <div>
-            <Contact
-              header="Interested in sharing your personal experience?"
-              linkText="Find out More"
-            >
-              These are the latest trips that you definitely want to book
-            </Contact>
+      <Layout>
+        <div>
+          <main >
+            <Article header="Check out our latest trips" data={data}></Article>
+            <div>
+              <Contact
+                header="Interested in sharing your personal experience?"
+                linkText="Find out More"
+              >
+                These are the latest trips that you definitely want to book
+              </Contact>
             </div>
-        </main>
+          </main>
+        </div>
       </Layout>
     </div>
   );
