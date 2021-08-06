@@ -24,11 +24,11 @@ body {
   font-weight: bold;
   font-size: 1.5em;
   font-family: "Bebas Neue", cursive;
-  color: #046582;
+  color: #001E6C;
 }
 
 .nav-link-text:visited {
-  color: #046582;
+  color: #001E6C;
   border-bottom: brown 3px solid;
 }
 
@@ -44,7 +44,7 @@ body {
 .heading {
   margin-right: auto;
   padding: 20px;
-  color: #046582;
+  color: #001E6C;
   font-family: "Bebas Neue", cursive;
   font-size: 2rem;
   font-weight: bold;
@@ -71,28 +71,28 @@ body {
   color: #2c2e43;
 }
 .link:visited {
-  color: #bb8082;
+  color: #053742;
 }
 .link {
-  border: 3px solid #595260;
+  border: 3px solid #053742;
   border-radius: 5px;
   font-size: large;
   font-weight: bold;
-  background-color: #e8f0f2;
+  background-color: #f39189;
   padding: 10px;
-  color: #bb8082;
+  color: #053742;
   text-decoration: none;
 }
 
 .link:hover {
-  background-color: #bb8082;
-  color: #e8f0f2;
+  background-color: #053742;
+  color:#f39189;
 }
 
 .work > div > .link {
   border: 3px solid #053742;
   background-color: #f39189;
-  color: white;
+  color: #053742;
 }
 
 .work > div > .link:hover {
@@ -105,7 +105,7 @@ p {
 }
 
 .about {
-  background-color: #046582;
+  background-color: #001E6C;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -147,7 +147,7 @@ p {
 
 .contact {
   color: #f39189;
-  background-color: #046582;
+  background-color: #001E6C;
   font-family: Georgia, "Times New Roman", Times, serif;
   display:flex;
   flex-direction: column;
@@ -176,11 +176,11 @@ p {
 
 .section > .link {
   color: #f39189;
-  background-color: #046582;
+  background-color: #001E6C;
   border: 3px solid #f39189;
 }
 .section .link:hover {
-  color: #046582;
+  color: #001E6C;
   background-color: #f39189;
   border: 3px solid #f39189;
 }
