@@ -20,8 +20,9 @@ const Home = () => {
         <div className={homeItem}>
           <StaticImage
             className={imageHome}
-            src="https://miro.medium.com/max/2980/1*8DYexSqTmp0dAVuZjvSHIQ.jpeg"
+            src="../images/travel.jpeg"
             alt="poza"
+            placeholder="blurred"
           />
         </div>
       </div>
@@ -29,7 +30,7 @@ const Home = () => {
         <div className={homeItem}>
           <StaticImage
             className={imageHome}
-            src="https://pcer.ac.in/wp-content/uploads/2020/01/community-service-navjeevan-centre-murbad-2-565x423.jpg"
+            src="../images/community.jpeg"
             alt="poza2"
           />
         </div>
