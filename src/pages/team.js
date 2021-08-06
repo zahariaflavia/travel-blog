@@ -19,7 +19,7 @@ const Team = () => {
           <StaticImage
             className={image}
             src="../images/person-icon.png"
-            alt="picure2"
+            alt="picture2"
           />
           <h5>Jane Doe | Author1</h5>
         </div>

@@ -10,16 +10,18 @@ const Work = ({ data }) => {
       <Helmet>
         <title>Work</title>
       </Helmet>
-      <main>
+      <div>
         <Article header="Check out our latest projects" data={data}></Article>
+      </div>
+      <div>
         <Contact
           header="Do you want to join forces and help our communities?"
           linkText="Find out More"
         >
-          We publishes some of our advice for promoting local tourism in
-          different parts of the globe
+          We publish some of our advice for promoting local tourism in different
+          parts of the globe
         </Contact>
-      </main>
+      </div>
     </Layout>
   );
 };
