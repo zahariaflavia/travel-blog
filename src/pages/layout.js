@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <nav className={layout}>
         <ul className={container}>
           <li className={heading}>
-            The Wanderer <DirectionsWalkIcon />
+            The Wanderer <DirectionsWalkIcon style={{height:"25px"}}/>
           </li>
           <li className={navListItem}>
             <Link className={navLinkText} to="/">
