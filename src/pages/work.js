@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "./layout";
 import { graphql } from "gatsby";
-import Article from "./{mdx.frontmatter__category}/article";
+import Article from "./article";
 import Contact from "./contact";
 import { Helmet } from "react-helmet";
 const Work = ({ data }) => {
@@ -27,21 +27,22 @@ const Work = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { category: { eq: "work" } } }
+    allContentstackBlogEntry(
+      sort: { fields: date, order: DESC }
+      filter: { category: { eq: "work" } }
     ) {
       nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          category
-          author
-        }
         id
-        slug
+        title
+        author
+        category
+        url
+        date
+        content
+        created_at
       }
     }
   }
 `;
+
 export default Work;

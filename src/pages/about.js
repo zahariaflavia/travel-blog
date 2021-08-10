@@ -3,7 +3,8 @@ import Layout from "./layout";
 import Team from "./team";
 import ContactInfo from "./contactinfo";
 import { Helmet } from "react-helmet";
-const About = () => {
+import { graphql } from "gatsby";
+const About = ({ data }) => {
   return (
     <div>
       <Helmet>
@@ -11,14 +12,22 @@ const About = () => {
       </Helmet>
       <Layout>
         <Team />
-        <ContactInfo
-          email="thewanderer@gmail.com"
-          phone="7834778402"
-          fb="The Wanderer"
-        />
+        <ContactInfo data={data} />
       </Layout>
     </div>
   );
 };
 
+export const query = graphql`
+  query {
+    allContentstackContactsection {
+      nodes {
+        title
+        social_media
+        phone_number
+        email
+      }
+    }
+  }
+`;
 export default About;

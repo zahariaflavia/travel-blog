@@ -35,10 +35,18 @@ module.exports = {
       __key: "destinations",
     },
     {
-      resolve: 'gatsby-plugin-html-attributes',
+      resolve: "gatsby-plugin-html-attributes",
       options: {
-        lang: 'en'
-      }
+        lang: "en",
+      },
+    },
+    {
+      resolve: "gatsby-source-contentstack",
+      options: {
+        api_key: "bltdfe1da235f64eab1",
+        delivery_token: "csde722475d13f6cd7f3abc5bb",
+        environment: "development",
+      },
     },
   ],
 };

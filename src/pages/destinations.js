@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "./layout";
 import { graphql } from "gatsby";
 import Contact from "./contact";
-import Article from "./{mdx.frontmatter__category}/article";
+import Article from "./article";
 import { Helmet } from "react-helmet";
 const Destinations = ({ data }) => {
   return (
@@ -12,7 +12,7 @@ const Destinations = ({ data }) => {
       </Helmet>
       <Layout>
         <div>
-          <main >
+          <main>
             <Article header="Check out our latest trips" data={data}></Article>
             <div>
               <Contact
@@ -30,19 +30,19 @@ const Destinations = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { category: { eq: "destinations" } } }
+    allContentstackBlogEntry(
+      sort: { fields: date, order: DESC }
+      filter: { category: { eq: "destinations" } }
     ) {
       nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          category
-          author
-        }
         id
-        slug
+        title
+        author
+        category
+        url
+        date
+        content
+        created_at
       }
     }
   }
