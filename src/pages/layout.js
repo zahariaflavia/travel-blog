@@ -9,6 +9,7 @@ import {
 } from "./layout.module.css";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 const Layout = ({ children }) => {
+  
   return (
     <div>
       <nav className={layout}>
@@ -44,3 +45,12 @@ const Layout = ({ children }) => {
   );
 };
 export default Layout;
+// export const query=graphql`
+// query{
+//   allContentstackNavbarelement {
+//     nodes {
+//       title
+//       url
+//     }
+//   }
+// }`

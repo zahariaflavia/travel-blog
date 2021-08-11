@@ -16,7 +16,7 @@ const Destinations = ({ data }) => {
             <Article header="Check out our latest trips" data={data}></Article>
             <div>
               <Contact
-                header={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_header}
+                header={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.header}
                 linkText={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.button_text}
                 content={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_promo}
                 url={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.url.href}
@@ -35,7 +35,7 @@ export const query = graphql`
         modular_blocks {
           Contact {
             button_text
-            contact_header
+            header
             contact_promo
             url {
               href

@@ -31,7 +31,7 @@ export const query = graphql`
         modular_blocks {
           Contact {
             button_text
-            contact_header
+            header
             contact_promo
             url {
               href

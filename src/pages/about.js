@@ -11,7 +11,7 @@ const About = ({ data }) => {
         <title>About Us</title>
       </Helmet>
       <Layout>
-        <Team />
+        <Team data={data}/>
         <ContactInfo data={data} />
       </Layout>
     </div>
@@ -20,6 +20,21 @@ const About = ({ data }) => {
 
 export const query = graphql`
   query {
+    allContentstackPage(filter: {title: {eq: "About"}}) {
+      nodes {
+        modular_blocks {
+          Team {
+            header
+            image {
+              url
+              uid
+            }
+            job
+            name
+          }
+        }
+      }
+    }
     allContentstackContactsection {
       nodes {
         title

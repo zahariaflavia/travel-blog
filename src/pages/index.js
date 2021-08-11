@@ -19,9 +19,17 @@ const IndexPage = ({data}) => {
 };
 export const query=graphql`
 query{
-  allContentstackPage(filter: {title: {eq: "HomePage"}}) {
+  allContentstackPage {
     nodes {
       modular_blocks {
+        Contact {
+          button_text
+          contact_promo
+          header
+          url {
+            href
+          }
+        }
         Destination {
           button_text
           destination_promo
@@ -41,14 +49,6 @@ query{
             href
           }
           work_promo
-        }
-        Contact {
-          button_text
-          contact_header
-          contact_promo
-          url {
-            href
-          }
         }
       }
     }

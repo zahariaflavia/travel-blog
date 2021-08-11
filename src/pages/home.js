@@ -75,7 +75,7 @@ const Home = ({ data }) => {
       <Contact
         header={
           data.allContentstackPage.nodes[0].modular_blocks[2].Contact
-            .contact_header
+            .header
         }
         linkText={
           data.allContentstackPage.nodes[0].modular_blocks[2].Contact
