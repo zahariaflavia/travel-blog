@@ -188,16 +188,32 @@ p {
 .article {
   background-color: #e8f0f2;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex;     */
+  /*align-items: center;
+  justify-content: center; */
   margin: auto;
 }
 
-.article div {
+.article {
   padding: 30px;
 }
 
+.article div p{
+  text-align: justify;
+}
+.article h1{
+  padding-left:20px;
+}
+.article h3{
+  padding-left:20px;
+}
+
+.article-children{
+  flex:1;
+  box-sizing:border-box;
+  padding:20px;
+  flex-basis:30%;
+}
 .picture {
   flex: 1;
   box-sizing: border-box;
@@ -262,6 +278,10 @@ footer{
   }
   .info {
     display: flex;
+    justify-content: space-between;
+  }
+  .article-container{
+    display:flex;
     justify-content: space-between;
   }
 }
