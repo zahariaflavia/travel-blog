@@ -16,11 +16,11 @@ const Destinations = ({ data }) => {
             <Article header="Check out our latest trips" data={data}></Article>
             <div>
               <Contact
-                header="Interested in sharing your personal experience?"
-                linkText="Find out More"
-              >
-                These are the latest trips that you definitely want to book
-              </Contact>
+                header={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_header}
+                linkText={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.button_text}
+                content={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_promo}
+                url={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.url.href}
+              />
             </div>
           </main>
         </div>
@@ -30,6 +30,20 @@ const Destinations = ({ data }) => {
 };
 export const query = graphql`
   query {
+    allContentstackPage(filter: { title: { eq: "Destination" } }) {
+      nodes {
+        modular_blocks {
+          Contact {
+            button_text
+            contact_header
+            contact_promo
+            url {
+              href
+            }
+          }
+        }
+      }
+    }
     allContentstackBlogEntry(
       sort: { fields: date, order: DESC }
       filter: { category: { eq: "destinations" } }
