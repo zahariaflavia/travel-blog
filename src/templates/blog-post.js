@@ -3,7 +3,6 @@ import Layout from "../pages/layout";
 import { graphql } from "gatsby";
 import {
   article,
-  articleImage,
   articleContainer,
   articleChildren,
   imageHome
