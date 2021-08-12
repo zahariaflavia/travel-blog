@@ -11,7 +11,7 @@ const IndexPage = ({data}) => {
         <meta description="Travel blog"/>
         <title>The Wanderer</title>
       </Helmet>
-      <Layout>
+      <Layout >
         <Home  data={data}/>
       </Layout>
     </div>
@@ -19,7 +19,8 @@ const IndexPage = ({data}) => {
 };
 export const query=graphql`
 query{
-  allContentstackPage {
+  
+  allContentstackPage(filter: { title: { eq: "HomePage" } }){
     nodes {
       modular_blocks {
         Contact {

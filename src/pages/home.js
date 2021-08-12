@@ -3,7 +3,6 @@ import { home, link, work, homeItem, imageHome } from "./layout.module.css";
 import { Link } from "gatsby";
 import Contact from "./contact";
 const Home = ({ data }) => {
-  console.log(data);
   return (
     <main>
       <div className={home}>
