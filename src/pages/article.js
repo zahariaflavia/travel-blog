@@ -8,7 +8,7 @@ const Article = ({ header, data }) => {
       <h1>{header}</h1>
       <ul>
         {data &&
-          data.allContentstackBlogEntry.nodes.map((destination) => {
+          data.map((destination) => {
             return (
               <li key={destination.id}>
                 <Link

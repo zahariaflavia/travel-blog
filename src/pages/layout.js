@@ -1,14 +1,13 @@
 import * as React from "react";
-import Navbar from './navbar'
+import Navbar from "./navbar";
+import Footer from "./footer";
 const Layout = ({ children }) => {
-  
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       {children}
-      <footer>You reached the end of the page</footer>
+      <Footer />
     </div>
   );
-
 };
 export default Layout;

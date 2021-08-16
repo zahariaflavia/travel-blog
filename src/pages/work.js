@@ -5,20 +5,25 @@ import Article from "./article";
 import Contact from "./contact";
 import { Helmet } from "react-helmet";
 const Work = ({ data }) => {
+  const contactSection = data.allContentstackPage.nodes[0].modular_blocks[1];
+  const title =
+    data.allContentstackPage.nodes[0].modular_blocks[0].Section.section_text;
+  const blogEntries = data.allContentstackBlogEntry.nodes;
+
   return (
     <Layout>
       <Helmet>
         <title>Work</title>
       </Helmet>
       <div>
-        <Article header="Check out our latest projects" data={data}></Article>
+        <Article header={title} data={blogEntries}></Article>
       </div>
       <div>
         <Contact
-          header={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_header}
-          linkText={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.button_text}
-          content={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_promo}
-          url={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.url.href}
+          header={contactSection.Contact.contact_header}
+          linkText={contactSection.Contact.button_text}
+          content={contactSection.Contact.contact_promo}
+          url={contactSection.Contact.url.href}
         />
       </div>
     </Layout>
@@ -26,9 +31,12 @@ const Work = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allContentstackPage(filter: {title: {eq: "Work"}}) {
+    allContentstackPage(filter: { title: { eq: "Work" } }) {
       nodes {
         modular_blocks {
+          Section {
+            section_text
+          }
           Contact {
             button_text
             header
@@ -41,8 +49,8 @@ export const query = graphql`
       }
     }
     allContentstackBlogEntry(
-      sort: {fields: date, order: DESC}
-      filter: {category: {eq: "work"}}
+      sort: { fields: date, order: DESC }
+      filter: { category: { eq: "work" } }
     ) {
       nodes {
         id

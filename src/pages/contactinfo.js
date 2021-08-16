@@ -6,21 +6,19 @@ import { info, icons, infoSection } from "./layout.module.css";
 const ContactInfo = ({ data }) => {
   return (
     <div>
-      <h3 className={infoSection}>
-        {data.allContentstackContactsection.nodes[0].title}
-      </h3>
+      <h3 className={infoSection}>{data.title}</h3>
       <div className={info}>
         <div className={icons}>
           <EmailIcon />
-          {data.allContentstackContactsection.nodes[0].email}
+          {data.email}
         </div>
         <div className={icons}>
           <ContactsIcon />
-          {data.allContentstackContactsection.nodes[0].phone_number}
+          {data.phone_number}
         </div>
         <div className={icons}>
           <FacebookIcon />
-          {data.allContentstackContactsection.nodes[0].social_media}
+          {data.social_media}
         </div>
       </div>
     </div>

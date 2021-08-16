@@ -5,7 +5,7 @@ import {
   article,
   articleContainer,
   articleChildren,
-  imageHome
+  imageHome,
 } from "../pages/layout.module.css";
 
 const BlogPost = ({ data }) => {
@@ -23,7 +23,7 @@ const BlogPost = ({ data }) => {
           </div>
           <div className={articleChildren}>
             <img
-            className={imageHome}
+              className={imageHome}
               src={data.contentstackBlogEntry.image.url}
               alt="img"
             />

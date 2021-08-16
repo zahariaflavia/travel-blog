@@ -5,6 +5,10 @@ import Contact from "./contact";
 import Article from "./article";
 import { Helmet } from "react-helmet";
 const Destinations = ({ data }) => {
+  const blogEntries = data.allContentstackBlogEntry.nodes;
+  const contactSection = data.allContentstackPage.nodes[0].modular_blocks[1];
+  const title =
+    data.allContentstackPage.nodes[0].modular_blocks[0].Section.section_text;
   return (
     <div>
       <Helmet>
@@ -13,13 +17,13 @@ const Destinations = ({ data }) => {
       <Layout>
         <div>
           <main>
-            <Article header="Check out our latest trips" data={data}></Article>
+            <Article header={title} data={blogEntries}></Article>
             <div>
               <Contact
-                header={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.header}
-                linkText={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.button_text}
-                content={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.contact_promo}
-                url={data.allContentstackPage.nodes[0].modular_blocks[0].Contact.url.href}
+                header={contactSection.Contact.header}
+                linkText={contactSection.Contact.button_text}
+                content={contactSection.Contact.contact_promo}
+                url={contactSection.Contact.url.href}
               />
             </div>
           </main>
@@ -33,10 +37,13 @@ export const query = graphql`
     allContentstackPage(filter: { title: { eq: "Destination" } }) {
       nodes {
         modular_blocks {
+          Section {
+            section_text
+          }
           Contact {
             button_text
-            header
             contact_promo
+            header
             url {
               href
             }
