@@ -10,19 +10,19 @@ const Home = ({ data }) => {
           <h1>
             <br />
             {
-              data.allContentstackPage.nodes[0].modular_blocks[0].Destination
-                .destination_promo
+              data.allContentstackPage.nodes[0].modular_blocks[0].Section
+                .section_text
             }
           </h1>
           <Link
             className={link}
             to={
-              data.allContentstackPage.nodes[0].modular_blocks[0].Destination
-                .url.href
+              data.allContentstackPage.nodes[0].modular_blocks[0].Section.url
+                .href
             }
           >
             {
-              data.allContentstackPage.nodes[0].modular_blocks[0].Destination
+              data.allContentstackPage.nodes[0].modular_blocks[0].Section
                 .button_text
             }
           </Link>
@@ -31,8 +31,8 @@ const Home = ({ data }) => {
           <img
             className={imageHome}
             src={
-              data.allContentstackPage.nodes[0].modular_blocks[0].Destination
-                .image_promo.url
+              data.allContentstackPage.nodes[0].modular_blocks[0].Section
+                .section_image.url
             }
             alt="poza"
             placeholder="blurred"
@@ -44,8 +44,8 @@ const Home = ({ data }) => {
           <img
             className={imageHome}
             src={
-              data.allContentstackPage.nodes[0].modular_blocks[1].Work
-                .image_promo.url
+              data.allContentstackPage.nodes[0].modular_blocks[1].Section
+                .section_image.url
             }
             alt="poza2"
           />
@@ -53,18 +53,19 @@ const Home = ({ data }) => {
         <div className={homeItem}>
           <h2>
             {
-              data.allContentstackPage.nodes[0].modular_blocks[1].Work
-                .work_promo
+              data.allContentstackPage.nodes[0].modular_blocks[1].Section
+                .section_text
             }
           </h2>
           <Link
             className={link}
             to={
-              data.allContentstackPage.nodes[0].modular_blocks[1].Work.url.href
+              data.allContentstackPage.nodes[0].modular_blocks[1].Section.url
+                .href
             }
           >
             {
-              data.allContentstackPage.nodes[0].modular_blocks[1].Work
+              data.allContentstackPage.nodes[0].modular_blocks[1].Section
                 .button_text
             }
           </Link>
@@ -73,8 +74,7 @@ const Home = ({ data }) => {
 
       <Contact
         header={
-          data.allContentstackPage.nodes[0].modular_blocks[2].Contact
-            .header
+          data.allContentstackPage.nodes[0].modular_blocks[2].Contact.header
         }
         linkText={
           data.allContentstackPage.nodes[0].modular_blocks[2].Contact
