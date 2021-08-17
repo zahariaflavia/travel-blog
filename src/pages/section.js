@@ -9,16 +9,16 @@ const Section = ({ node, sectionClassName }) => {
           <div className={homeItem}>
             <h1>
               <br />
-              {node.Section.section_text}
+              {node&&node.Section.section_text}
             </h1>
-            <Link className={link} to={node.Section.link}>
-              {node.Section.button_text}
+            <Link className={link} to={node&&node.Section.link}>
+              {node&&node.Section.button_text}
             </Link>
           </div>
           <div className={homeItem}>
             <img
               className={imageHome}
-              src={node.Section.section_image.url}
+              src={node &&node.Section.section_image.url}
               alt="poza"
               placeholder="blurred"
             />
@@ -29,14 +29,14 @@ const Section = ({ node, sectionClassName }) => {
           <div className={homeItem}>
             <img
               className={imageHome}
-              src={node.Section.section_image.url}
+              src={node&&node.Section.section_image.url}
               alt="poza2"
             />
           </div>
           <div className={homeItem}>
-            <h2>{node.Section.section_text}</h2>
-            <Link className={link} to={node.Section.link}>
-              {node.Section.button_text}
+            <h2>{node&&node.Section.section_text}</h2>
+            <Link className={link} to={node &&node.Section.link}>
+              {node&&node.Section.button_text}
             </Link>
           </div>
         </>

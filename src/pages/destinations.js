@@ -5,10 +5,10 @@ import Contact from "./contact";
 import Article from "./article";
 import { Helmet } from "react-helmet";
 const Destinations = ({ data }) => {
-  const blogEntries = data.allContentstackBlogEntry.nodes;
-  const contactSection = data.allContentstackPage.nodes[0].modular_blocks[1];
+  const blogEntries = data&&data.allContentstackBlogEntry.nodes;
+  const contactSection = data&&data.allContentstackPage.nodes[0].modular_blocks[1];
   const title =
-    data.allContentstackPage.nodes[0].modular_blocks[0].Section.section_text;
+    data&& data.allContentstackPage.nodes[0].modular_blocks[0].Section.section_text;
   return (
     <div>
       <Helmet>

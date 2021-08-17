@@ -5,8 +5,8 @@ import ContactInfo from "./contactinfo";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 const About = ({ data }) => {
-  const teamDetails = data.allContentstackPage.nodes[0].modular_blocks;
-  const contactInfo = data.allContentstackContactsection.nodes[0];
+  const teamDetails = data&&data.allContentstackPage.nodes[0].modular_blocks;
+  const contactInfo = data&&data.allContentstackContactsection.nodes[0];
   return (
     <div>
       <Helmet>

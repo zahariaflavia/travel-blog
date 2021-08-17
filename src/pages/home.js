@@ -4,10 +4,10 @@ import { home, work } from "./layout.module.css";
 import Contact from "./contact";
 import Section from "./section";
 const Home = ({ data }) => {
-  const sections = data.allContentstackPage.nodes[0].modular_blocks;
+  const sections = data&&data.allContentstackPage.nodes[0].modular_blocks;
   return (
     <main>
-      {sections
+      {sections&&sections
         .filter((node) => node.Section !== null)
         .map((node, index) => {
           const sectionClassName =
@@ -22,10 +22,10 @@ const Home = ({ data }) => {
         })}
 
       <Contact
-        header={sections[sections.length - 1].Contact.header}
-        linkText={sections[sections.length - 1].Contact.button_text}
-        content={sections[sections.length - 1].Contact.contact_promo}
-        url={sections[sections.length - 1].Contact.link}
+        header={sections&&sections[sections.length - 1].Contact.header}
+        linkText={sections&&sections[sections.length - 1].Contact.button_text}
+        content={sections&&sections[sections.length - 1].Contact.contact_promo}
+        url={sections&&sections[sections.length - 1].Contact.link}
       />
     </main>
   );

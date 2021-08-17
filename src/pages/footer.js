@@ -10,7 +10,7 @@ const Footer = () => {
       }
     }
   `);
-  return <footer>{data.allContentstackFooter.nodes[0].title}</footer>;
+  return <footer>{data&&data.allContentstackFooter.nodes[0].title}</footer>;
 };
 
 export default Footer;
