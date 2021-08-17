@@ -45,9 +45,7 @@ export const query = graphql`
             link
             contact_promo
             header
-            url {
-              href
-            }
+            
           }
         }
       }
@@ -64,7 +62,7 @@ export const query = graphql`
         url
         date
         content
-        created_at
+      
       }
     }
   }

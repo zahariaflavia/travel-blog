@@ -29,18 +29,14 @@ query{
             url
           }
           section_text
-          url {
-            href
-          }
+          
         }
         Contact {
           button_text
           link
           contact_promo
           header
-          url {
-            href
-          }
+        
         }
       }
     }
