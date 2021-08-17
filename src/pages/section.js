@@ -11,7 +11,7 @@ const Section = ({ node, sectionClassName }) => {
               <br />
               {node.Section.section_text}
             </h1>
-            <Link className={link} to={node.Section.url.href}>
+            <Link className={link} to={node.Section.link}>
               {node.Section.button_text}
             </Link>
           </div>
@@ -35,7 +35,7 @@ const Section = ({ node, sectionClassName }) => {
           </div>
           <div className={homeItem}>
             <h2>{node.Section.section_text}</h2>
-            <Link className={link} to={node.Section.url.href}>
+            <Link className={link} to={node.Section.link}>
               {node.Section.button_text}
             </Link>
           </div>

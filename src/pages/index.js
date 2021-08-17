@@ -24,6 +24,7 @@ query{
       modular_blocks {
         Section {
           button_text
+          link
           section_image {
             url
           }
@@ -34,6 +35,7 @@ query{
         }
         Contact {
           button_text
+          link
           contact_promo
           header
           url {

@@ -20,10 +20,10 @@ const Work = ({ data }) => {
       </div>
       <div>
         <Contact
-          header={contactSection.Contact.contact_header}
+          header={contactSection.Contact.header}
           linkText={contactSection.Contact.button_text}
           content={contactSection.Contact.contact_promo}
-          url={contactSection.Contact.url.href}
+          url={contactSection.Contact.link}
         />
       </div>
     </Layout>
@@ -39,6 +39,7 @@ export const query = graphql`
           }
           Contact {
             button_text
+            link
             header
             contact_promo
             url {

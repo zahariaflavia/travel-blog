@@ -15,14 +15,11 @@ const Navbar = () => {
         nodes {
           nav_item {
             Nav_Link {
+              link
               title
-              url {
-                href
-              }
             }
           }
           title
-          id
         }
       }
     }
@@ -39,7 +36,7 @@ const Navbar = () => {
           (node, index) => {
             return (
               <li className={navListItem} key={index}>
-                <Link className={navLinkText} to={node.Nav_Link.url.href}>
+                <Link className={navLinkText} to={node.Nav_Link.link}>
                   {node.Nav_Link.title}
                 </Link>
               </li>

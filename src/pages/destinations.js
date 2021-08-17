@@ -23,7 +23,7 @@ const Destinations = ({ data }) => {
                 header={contactSection.Contact.header}
                 linkText={contactSection.Contact.button_text}
                 content={contactSection.Contact.contact_promo}
-                url={contactSection.Contact.url.href}
+                url={contactSection.Contact.link}
               />
             </div>
           </main>
@@ -42,6 +42,7 @@ export const query = graphql`
           }
           Contact {
             button_text
+            link
             contact_promo
             header
             url {

@@ -25,7 +25,7 @@ const Home = ({ data }) => {
         header={sections[sections.length - 1].Contact.header}
         linkText={sections[sections.length - 1].Contact.button_text}
         content={sections[sections.length - 1].Contact.contact_promo}
-        url={sections[sections.length - 1].Contact.url.href}
+        url={sections[sections.length - 1].Contact.link}
       />
     </main>
   );
