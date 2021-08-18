@@ -63,20 +63,18 @@ query MyQuery($title: String) {
 ## Fields:
 
 Title
-Nav Item(modular blocks): Nav Link( fields: Title, link ) 
-
+NavElement( which is a reference field of content type: NavItem)
+* the reference field accepts multiple entries of other content types if we check "Multiple" in Reference-Properties box
 
 ## Graphql Query
 
 ```javascript
 query Nav {
-      allContentstackNavelements {
+      allContentstackNavbarelements {
         nodes {
-          nav_item {
-            Nav_Link {
-              link
-              title
-            }
+          navelements {
+            title
+            url
           }
           title
         }
@@ -85,7 +83,8 @@ query Nav {
 ```
 
 * the result of the query:
-data: object, allContentstackNavelements:object, nodes:array that only has one element because there is only one Navelement defined,nav_items:array of Nav_link objects
+data:object,allContentstackNavbarelementsLobject,nodes:array that has only one element,navelements:array containing all the navItems
+* 
 
 * for the navbar and footer (components of Layout), I used StaticQuery in order to avoid passing down data from Layout to them, as Layout is reused in all the other pages
 

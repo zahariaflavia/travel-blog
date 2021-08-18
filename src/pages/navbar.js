@@ -11,13 +11,11 @@ import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 const Navbar = () => {
   const data = useStaticQuery(graphql`
     query Nav {
-      allContentstackNavelements {
+      allContentstackNavbarelements {
         nodes {
-          nav_item {
-            Nav_Link {
-              link
-              title
-            }
+          navelements {
+            title
+            url
           }
           title
         }
@@ -29,15 +27,15 @@ const Navbar = () => {
     <nav className={layout}>
       <ul className={container}>
         <li className={heading}>
-          {data.allContentstackNavelements.nodes[0].title}
+          {data.allContentstackNavbarelements.nodes[0].title}
           <DirectionsWalkIcon style={{ height: "25px" }} />
         </li>
-        {data.allContentstackNavelements.nodes[0].nav_item.map(
+        {data.allContentstackNavbarelements.nodes[0].navelements.map(
           (node, index) => {
             return (
               <li className={navListItem} key={index}>
-                <Link className={navLinkText} to={node.Nav_Link.link}>
-                  {node.Nav_Link.title}
+                <Link className={navLinkText} to={node.url}>
+                  {node.title}
                 </Link>
               </li>
             );
