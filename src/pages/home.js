@@ -1,57 +1,32 @@
 import * as React from "react";
-import { home, link, work, homeItem, imageHome } from "./layout.module.css";
-import { Link } from "gatsby";
+import { home, work } from "./layout.module.css";
+
 import Contact from "./contact";
-import { StaticImage } from "gatsby-plugin-image";
-const Home = () => {
+import Section from "./section";
+const Home = ({ data }) => {
+  const sections = data&&data.allContentstackPage.nodes[0].modular_blocks;
   return (
     <main>
-      <div className={home}>
-        <div className={homeItem}>
-          <h1>
-            No idea where to go next?
-            <br />
-            Let us wander together around the world
-          </h1>
-          <Link className={link} to="/destinations">
-            See our Destinations
-          </Link>
-        </div>
-        <div className={homeItem}>
-          <StaticImage
-            className={imageHome}
-            src="../images/travel.jpeg"
-            alt="poza"
-            placeholder="blurred"
-          />
-        </div>
-      </div>
-      <div className={work}>
-        <div className={homeItem}>
-          <StaticImage
-            className={imageHome}
-            src="../images/community.jpeg"
-            alt="poza2"
-          />
-        </div>
-        <div className={homeItem}>
-          <h2>
-            We help local communities promote their business. Learn more about
-            the process.
-          </h2>
-          <Link className={link} to="/work">
-            Check our Work
-          </Link>
-        </div>
-      </div>
+      {sections&&sections
+        .filter((node) => node.Section !== null)
+        .map((node, index) => {
+          const sectionClassName =
+            sections.indexOf(node) % 2 === 0 ? home : work;
+          return (
+            <Section
+              node={node}
+              sectionClassName={sectionClassName}
+              key={index}
+            />
+          );
+        })}
 
       <Contact
-        header="Interested in joining our team?"
-        linkText="Meet the Members"
-      >
-        {" "}
-        Meet our members and see if our community is what you are looking for.
-      </Contact>
+        header={sections&&sections[sections.length - 1].Contact.header}
+        linkText={sections&&sections[sections.length - 1].Contact.button_text}
+        content={sections&&sections[sections.length - 1].Contact.contact_promo}
+        url={sections&&sections[sections.length - 1].Contact.link}
+      />
     </main>
   );
 };

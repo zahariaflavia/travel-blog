@@ -2,9 +2,13 @@ import * as React from "react";
 import Layout from "./layout";
 import { graphql } from "gatsby";
 import Contact from "./contact";
-import Article from "./{mdx.frontmatter__category}/article";
+import Article from "./article";
 import { Helmet } from "react-helmet";
 const Destinations = ({ data }) => {
+  const blogEntries = data&&data.allContentstackBlogEntry.nodes;
+  const contactSection = data&&data.allContentstackPage.nodes[0].modular_blocks[1];
+  const title =
+    data&& data.allContentstackPage.nodes[0].modular_blocks[0].Section.section_text;
   return (
     <div>
       <Helmet>
@@ -12,15 +16,15 @@ const Destinations = ({ data }) => {
       </Helmet>
       <Layout>
         <div>
-          <main >
-            <Article header="Check out our latest trips" data={data}></Article>
+          <main>
+            <Article header={title} data={blogEntries}></Article>
             <div>
               <Contact
-                header="Interested in sharing your personal experience?"
-                linkText="Find out More"
-              >
-                These are the latest trips that you definitely want to book
-              </Contact>
+                header={contactSection.Contact.header}
+                linkText={contactSection.Contact.button_text}
+                content={contactSection.Contact.contact_promo}
+                url={contactSection.Contact.link}
+              />
             </div>
           </main>
         </div>
@@ -30,19 +34,35 @@ const Destinations = ({ data }) => {
 };
 export const query = graphql`
   query {
-    allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { category: { eq: "destinations" } } }
+    allContentstackPage(filter: { title: { eq: "Destination" } }) {
+      nodes {
+        modular_blocks {
+          Section {
+            section_text
+          }
+          Contact {
+            button_text
+            link
+            contact_promo
+            header
+            
+          }
+        }
+      }
+    }
+    allContentstackBlogEntry(
+      sort: { fields: date, order: DESC }
+      filter: { category: { eq: "destinations" } }
     ) {
       nodes {
-        frontmatter {
-          date(formatString: "MMMM D, YYYY")
-          title
-          category
-          author
-        }
         id
-        slug
+        title
+        author
+        category
+        url
+        date
+        content
+      
       }
     }
   }

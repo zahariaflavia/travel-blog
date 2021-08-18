@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { listItem, posts } from "../layout.module.css";
+import { listItem, posts } from "./layout.module.css";
 
 const Article = ({ header, data }) => {
   return (
@@ -8,14 +8,14 @@ const Article = ({ header, data }) => {
       <h1>{header}</h1>
       <ul>
         {data &&
-          data.allMdx.nodes.map((destination) => {
+          data.map((destination) => {
             return (
               <li key={destination.id}>
                 <Link
                   className={listItem}
-                  to={`/${destination.frontmatter.category}/${destination.slug}`}
+                  to={`/${destination.category}${destination.url}`}
                 >
-                  {destination.frontmatter.title}
+                  {destination.title}
                 </Link>
               </li>
             );

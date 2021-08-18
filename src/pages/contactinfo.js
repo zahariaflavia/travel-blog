@@ -3,22 +3,22 @@ import EmailIcon from "@material-ui/icons/Email";
 import ContactsIcon from "@material-ui/icons/Contacts";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { info, icons, infoSection } from "./layout.module.css";
-const ContactInfo = ({ email, phone, fb }) => {
+const ContactInfo = ({ data }) => {
   return (
     <div>
-      <h3 className={infoSection}>You know where to find us</h3>
+      <h3 className={infoSection}>{data&&data.title}</h3>
       <div className={info}>
         <div className={icons}>
           <EmailIcon />
-          {email}
+          {data&&data.email}
         </div>
         <div className={icons}>
           <ContactsIcon />
-          {phone}
+          {data&&data.phone_number}
         </div>
         <div className={icons}>
           <FacebookIcon />
-          {fb}
+          {data&&data.social_media}
         </div>
       </div>
     </div>

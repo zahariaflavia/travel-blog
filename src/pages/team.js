@@ -1,37 +1,25 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { picture, image, about, gallery } from "./layout.module.css";
-const Team = () => {
+const Team = ({ data }) => {
   return (
     <div className={about}>
-      <h1>Meet our team.</h1>
+      <h1>{data && data[0].Team.header}</h1>
       <div className={gallery}>
-        <div className={picture}>
-          <StaticImage
-            className={image}
-            src="../images/person-icon.png"
-            alt="picture1"
-          />
-          <h5>James Parker | Author2</h5>
-        </div>
-
-        <div className={picture}>
-          <StaticImage
-            className={image}
-            src="../images/person-icon.png"
-            alt="picture2"
-          />
-          <h5>Jane Doe | Author1</h5>
-        </div>
-
-        <div className={picture}>
-          <StaticImage
-            className={image}
-            src="../images/person-icon.png"
-            alt="picture3"
-          />
-          <h5>John Doe | Volunteer</h5>
-        </div>
+        {data &&
+          data.map((node, index) => {
+            return (
+              <div className={picture} key={index}>
+                <img
+                  className={image}
+                  src={node.Team.image.url}
+                  alt="person-icon"
+                />
+                <h5>
+                  {node.Team.name} | {node.Team.job}
+                </h5>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

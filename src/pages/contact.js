@@ -7,7 +7,7 @@ import {
   link,
 } from "./layout.module.css";
 import { Link } from "gatsby";
-const Contact = ({ header, linkText, children }) => {
+const Contact = ({ header, linkText, content,url }) => {
   return (
     <div className={contact}>
       <div className={title}>
@@ -15,10 +15,10 @@ const Contact = ({ header, linkText, children }) => {
       </div>
       <div className={contactDetails}>
         <div className={section}>
-          <h3>{children}</h3>
+          <h3>{content}</h3>
         </div>
         <div className={section}>
-          <Link className={link} to="/about">
+          <Link className={link} to={url}>
             {linkText}
           </Link>
         </div>

@@ -2,19 +2,46 @@ import * as React from "react";
 import Layout from "./layout";
 import Home from "./home";
 import { Helmet } from "react-helmet";
-const IndexPage = () => {
+import { graphql } from "gatsby";
+const IndexPage = ({ data }) => {
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <meta description="Travel blog"/>
+        <meta description="Travel blog" />
         <title>The Wanderer</title>
       </Helmet>
       <Layout>
-        <Home />
+        <Home data={data}/>
       </Layout>
     </div>
   );
 };
+export const query = graphql`
+query{
+  allContentstackPage(filter: {title: {eq: "HomePage"}}) {
+    nodes {
+      modular_blocks {
+        Section {
+          button_text
+          link
+          section_image {
+            url
+          }
+          section_text
+          
+        }
+        Contact {
+          button_text
+          link
+          contact_promo
+          header
+        
+        }
+      }
+    }
+  }
+}
+`;
 
 export default IndexPage;

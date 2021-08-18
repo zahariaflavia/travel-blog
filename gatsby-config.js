@@ -1,3 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+const {
+  CONTENTSTACK_API_KEY,
+  CONTENTSTACK_DELIVERY_TOKEN,
+  CONTENTSTACK_ENVIRONMENT,
+} = process.env
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -35,10 +43,18 @@ module.exports = {
       __key: "destinations",
     },
     {
-      resolve: 'gatsby-plugin-html-attributes',
+      resolve: "gatsby-plugin-html-attributes",
       options: {
-        lang: 'en'
-      }
+        lang: "en",
+      },
+    },
+    {
+      resolve: "gatsby-source-contentstack",
+      options: {
+        api_key: CONTENTSTACK_API_KEY,
+        delivery_token: CONTENTSTACK_DELIVERY_TOKEN,
+        environment: CONTENTSTACK_ENVIRONMENT,
+      },
     },
   ],
 };
