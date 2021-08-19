@@ -7,7 +7,8 @@ import {
   articleChildren,
   imageHome,
 } from "../pages/layout.module.css";
-
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 const BlogPost = ({ data }) => {
   return (
     <Layout pageTitle="Articles">
@@ -19,7 +20,10 @@ const BlogPost = ({ data }) => {
 
         <div className={articleContainer}>
           <div className={articleChildren}>
-            <p>{data.contentstackBlogEntry.content}</p>
+            <ReactMarkdown
+              children={data.contentstackBlogEntry.content}
+              remarkPlugins={[remarkGfm]}
+            />
           </div>
           <div className={articleChildren}>
             <img
