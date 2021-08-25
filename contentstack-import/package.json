@@ -1,0 +1,66 @@
+{
+  "name": "contentstack-import",
+  "version": "1.7.3",
+  "description": "Import data into Contentstack",
+  "homepage": "https://www.contentstack.com/docs/tools-and-frameworks/content-migration/within-contentstack",
+  "author": {
+    "name": "Contentstack LLC <support@contentstack.com>",
+    "url": "https://www.contentstack.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "debug": "4.1.0",
+    "lodash": "4.17.15",
+    "marked": "0.7.0",
+    "mkdirp": "0.5.1",
+    "ncp": "2.0.0",
+    "request": "2.88.0",
+    "winston": "2.2.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "app.js",
+  "maintainers": [
+    {
+      "name": "rohitmishra",
+      "email": "rohit.mishra@contentstack.com"
+    },
+    {
+      "name": "ninadhatkar",
+      "email": "ninad.hatkar@contentstack.com"
+    },
+    {
+      "name": "mynk",
+      "email": "mayank@contentstack.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contentstack/contentstack-import"
+  },
+  "bugs": {
+    "url": "https://github.com/contentstack/contentstack-import/issues"
+  },
+  "scripts": {
+    "import": "node app.js",
+    "import-assets": "node app.js assets",
+    "import-entries": "node app.js entries",
+    "import-contenttypes": "node app.js content_types",
+    "import-locales": "node app.js locales",
+    "import-env": "node app.js environments",
+    "import-globalfields": "node app.js global_fields",
+    "import-webhooks": "node app.js webhooks",
+    "import-extensions": "node app.js extensions",
+    "import-labels": "node app.js labels"
+  },
+  "keywords": [
+    "contentstack",
+    "migration-utility",
+    "stack-backup"
+  ],
+  "devDependencies": {
+    "eslint": "5.9.0"
+  }
+}
