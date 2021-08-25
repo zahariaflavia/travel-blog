@@ -1,3 +1,10 @@
+require("dotenv").config({
+  path: `../.env.management`,
+})
+const {
+  CONTENTSTACK_API_KEY,
+  MANAGEMENT_TOKEN,
+} = process.env
 module.exports = {
   master_locale: {
     // master locale of the stack
@@ -8,8 +15,8 @@ module.exports = {
   email: '',   // (optional)
   password: '', // (optional)
   // Stack API KEY
-  source_stack: 'bltdfe1da235f64eab1',             // mandatory
-  management_token: 'csec91985910ff636e060a8f13',    
+  source_stack: CONTENTSTACK_API_KEY,             // mandatory
+  management_token:MANAGEMENT_TOKEN ,    
   // Path where the exported data will be stored (relative path)
   data: './contents'
 };

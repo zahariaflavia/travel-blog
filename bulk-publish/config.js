@@ -1,3 +1,9 @@
+require("dotenv").config({
+  path: `./.env.development`,
+})
+const {
+  CONTENTSTACK_DELIVERY_TOKEN
+} = process.env
 module.exports = {
   alias: "management token",
 
@@ -50,7 +56,7 @@ module.exports = {
       type: "entry_published",
       
     },
-    deliveryToken: "csde722475d13f6cd7f3abc5bb",
+    deliveryToken: CONTENTSTACK_DELIVERY_TOKEN,
     bulkUnpublish: true,
   },
 
@@ -62,7 +68,7 @@ module.exports = {
       locale: "en-us",
       type: "entry_published",
     },
-    deliveryToken: "csde722475d13f6cd7f3abc5bb",
+    deliveryToken: CONTENTSTACK_DELIVERY_TOKEN,
     destEnv: ["production"],
     bulkPublish: true,
   },
